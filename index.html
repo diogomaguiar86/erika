@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diogo e Erika</title>
+    <style>
+        body {
+            background-color: #fde2e4;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #85586F;
+        }
+        img {
+            border-radius: 10px;
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        .carousel img {
+            width: 50%;
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .controls {
+            margin-top: 10px;
+        }
+        button {
+            background-color: #ffcad4;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>💖...::: ERIKA E DIOGO :::... 💖</h1>
+
+    <h1>💖 15_02_2025 💖</h1>
+
+    <div>
+        <a class="img">
+        <img src="mao1.png" width="10%">
+        </a>
+
+       
+
+        <a class="img">
+        <img src="mao2.png" width="11%">
+        </a>
+
+    </div>
+    <br>
+
+    <h3>Nossos Momentos inesquecíveis juntos!</h3>
+    
+    <div class="carousel">
+
+        <a class="controls">
+            <button onclick="prevImage()">⬅️</button>        
+                <img id="carousel-img" src="img_020.jpeg" alt="MOMENTOS">
+            <button onclick="nextImage()">➡️</button>
+        </a>
+
+    </div>
+    
+    
+    <audio autoplay loop>
+        <source src="SaveMe.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+    
+    <script>
+        let images = ["img_014.jpeg", "img_015.jpeg", "img_017.jpeg"
+                        , "img_018.jpeg", "img_019.jpeg", "img_020.jpeg", "img_022.jpeg"
+        ];
+        let index = 0;
+        
+        function nextImage() {
+            index = (index + 1) % images.length;
+            document.getElementById("carousel-img").src = images[index];
+        }
+        
+        function prevImage() {
+            index = (index - 1 + images.length) % images.length;
+            document.getElementById("carousel-img").src = images[index];
+        }
+    </script>
+</body>
+</html>
