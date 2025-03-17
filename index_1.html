@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show de Cores</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(-45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #00ffff, #0000ff, #8a00ff, #ff00ff);
+            background-size: 400% 400%;
+            animation: gradient 10s infinite alternate;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        h1 {
+            font-size: 4rem;
+            color: black;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff0000;
+            animation: glow 1.5s infinite alternate;
+        }
+
+
+        h5 {
+            font-size: 4rem;
+            color: white;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px #f0f0f0, 0 0 10px #ff00ff, 0 0 20px #ff0000;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff0000; }
+            100% { text-shadow: 0 0 20px #fff, 0 0 30px #00ff00, 0 0 40px #0000ff; }
+        }
+    </style>
+
+<h1 style="text-align: center;">💖 ... 💖...💖 ... 💖 <br> ERIKA <br> E <br> DIOGO <br>💖 ... 💖...💖 ... 💖</h1><br>
+
+
+
+</head>
+
+
+<body>
+    
+</body>
+
+
+
+</html>
