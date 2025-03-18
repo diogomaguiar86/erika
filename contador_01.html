@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Tempo Juntos</title>
+    <style>
+         img {
+            border-radius: 10px;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            color: #d63384;
+            padding: 50px;
+        }
+        .contador {
+            font-size: 24px;
+            padding: 20px;
+            border-radius: 15px;
+            background: white;
+            display: inline-block;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .titulo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ffcad4;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .romantic-button {
+            background: linear-gradient(45deg, #ffb6c1, #ffcccb);
+            border: none;
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .romantic-button:hover {
+            background: linear-gradient(45deg, #ff94a4, #ffb6c1);
+            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.8);
+            transform: scale(1.05);
+        }
+
+        .romantic-button::before {
+            content: "💖";
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        footer {
+            position: relative;
+            bottom: 10px;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px #140e0e, 0 0 10px #ff00ff;
+        }
+    </style>
+</head>
+<body>
+
+
+    <a href="index.html"> 
+    <button class="romantic-button"> VOLTAR </button>
+    </a>
+
+    <br><br><br><br><br><br>
+
+
+    <div class="titulo">❤️ Nosso Tempo Juntos ❤️</div>
+
+    <br><br><br>
+
+    <br> <br> 
+
+
+
+
+        <a class="img">
+        <img src="mao1.png" width="10%">
+        </a>
+
+       
+
+        <a class="img">
+        <img src="mao2.png" width="11%">
+        </a>
+        <br><br><br><br> <br> <br>
+    
+    <div class="titulo">❤️ 15 _ 02 _ 2025 ❤️</div>
+
+    <br><br><br>
+
+    <div class="contador" id="contador"></div>
+
+    <br><br><br><br><br><br>
+
+    <script>
+        function atualizarContador() {
+            const dataInicial = new Date("February 15, 2025 11:30:00");
+            const agora = new Date();
+            let diferenca = agora - dataInicial;
+
+            let segundos = Math.floor(diferenca / 1000);
+            let minutos = Math.floor(segundos / 60);
+            let horas = Math.floor(minutos / 60);
+            let dias = Math.floor(horas / 24);
+            let meses = Math.floor(dias / 30.44);
+            let anos = Math.floor(meses / 12);
+
+            meses = meses % 12;
+            dias = Math.floor(dias % 30.44);
+            horas = horas % 24;
+            minutos = minutos % 60;
+            segundos = segundos % 60;
+
+            document.getElementById("contador").innerHTML = 
+            `
+                ${anos} anos, 
+                ${meses} meses, 
+                ${dias} dias,<br>
+                ${horas} horas, 
+                ${minutos} minutos, 
+                ${segundos} segundos
+            `;
+        }
+        setInterval(atualizarContador, 1000);
+        atualizarContador();
+    </script>
+
+<br><br><br><br><br><br>
+
+<footer style="text-align: center;">
+    💖 <strong> Feito com amor por Diogo para a Erika</strong> 💖
+</footer>
+<br><br><br>
+</body>
+</html>

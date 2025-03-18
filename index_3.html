@@ -3,47 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erika e Diogo</title>
+    <title>Carrossel de Imagens</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            height: 100vh;
+            background-color: #fde2e4;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #85586F;
+        }
+
+        .carousel {
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            border-radius: 30px;
+        }
+
+        .carousel-images {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(-45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #00ffff, #0000ff, #8a00ff, #ff00ff);
-            background-size: 400% 400%;
-            animation: gradient 10s infinite alternate;
+            width: 100%;
+            animation: slide 24s infinite;
         }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+
+        .carousel img {
+            width: 100%;
+            object-fit: cover;
         }
+
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0%); }
+        }
+
         h1 {
+            text-align: center;
             font-size: 4rem;
             color: black;
             text-transform: uppercase;
             font-family: Arial, sans-serif;
             text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff0000;
             animation: glow 1.5s infinite alternate;
-        }
-
-
-        h5 {
-            font-size: 4rem;
-            color: white;
-            text-transform: uppercase;
-            font-family: Arial, sans-serif;
-            text-shadow: 0 0 5px #f0f0f0, 0 0 10px #ff00ff, 0 0 20px #ff0000;
-            animation: glow 1.5s infinite alternate;
-        }
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff0000; }
-            100% { text-shadow: 0 0 20px #fff, 0 0 30px #00ff00, 0 0 40px #0000ff; }
         }
 
         button {
@@ -95,29 +105,37 @@
             text-shadow: 0 0 5px #140e0e, 0 0 10px #ff00ff;
         }
     </style>
-
-<h1 style="text-align: center;">💖 ... 💖...💖 ... 💖 <br> ERIKA <br> E <br> DIOGO <br>💖 ... 💖...💖 ... 💖</h1><br>
-
-
-
 </head>
-
-
 <body>
-
     <a href="index.html"> 
     <button class="romantic-button"> VOLTAR </button>
     </a>
 
-    <br><br><br><br><br><br>
-
-<footer style="text-align: center;">
-    💖 <strong> Feito com amor por Diogo para a Erika</strong> 💖
-</footer>
-<br><br><br>
+    <br><br><br>
     
+    <h1>💖...::: ERIKA E DIOGO :::... 💖</h1>
+
+    <br><br><br>
+
+    <h1>💖...::: NOSSOS MOMENTOS :::... 💖</h1>
+
+    <br><br><br>
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="img_014.jpeg" alt="Imagem 1">
+            <img src="img_015.jpeg" alt="Imagem 2">
+            <img src="img_017.jpeg" alt="Imagem 3">
+            <img src="img_018.jpeg" alt="Imagem 4">
+            <img src="img_014.jpeg" alt="Imagem 1">
+            <img src="img_015.jpeg" alt="Imagem 2">
+            <img src="img_017.jpeg" alt="Imagem 3">
+            <img src="img_018.jpeg" alt="Imagem 4">
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <footer style="text-align: center;">
+        💖 <strong> Feito com amor por Diogo para a Erika</strong> 💖
+    </footer>
+    <br><br><br><br><br><br>
 </body>
-
-
-
 </html>

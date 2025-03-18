@@ -15,16 +15,19 @@
         img {
             border-radius: 10px;
         }
+        
         .carousel {
-            display: flex;
+            width: 100%;
+            max-width: 600px;
             overflow: hidden;
-            width: 300px;
-            margin: 20px auto;
-            border-radius: 10px;
+            position: relative;
+            margin: auto;
+            border-radius: 30px;
         }
+
         .carousel img {
             width: 50%;
-            border-radius: 10px;
+            border-radius: 30px;
             transition: transform 0.5s ease-in-out;
         }
         .controls {
@@ -36,28 +39,106 @@
             padding: 10px;
             margin: 5px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 3px;
+        }
+
+        .romantic-button {
+            background: linear-gradient(45deg, #ffb6c1, #ffcccb);
+            border: none;
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .romantic-button:hover {
+            background: linear-gradient(45deg, #ff94a4, #ffb6c1);
+            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.8);
+            transform: scale(1.05);
+        }
+
+        .romantic-button::before {
+            content: "💖";
+            position: absolute;
+            left: 10px;
+            top: 100%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .carousell {
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .carousel-images {
+            display: flex;
+            width: 80%;
+            animation: slide 24s infinite;
+        }
+
+        
+
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0%); }
         }
 
         footer {
-            position: absolute;
+            position: relative;
             bottom: 10px;
             text-align: center;
             color: white;
             font-size: 1.5rem;
             font-family: Arial, sans-serif;
-            text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff;
+            text-shadow: 0 0 5px #140e0e, 0 0 10px #ff00ff;
         }
     </style>
 </head>
 <body>
+
+    <br> <br> <br><br> <br> <br>
     <h1>💖...::: ERIKA E DIOGO :::... 💖</h1>
+    <br> <br> <br>
+   
 
-    <h1>💖 15_02_2025 💖</h1>
+    <a href="index_1.html"> 
+    <button class="romantic-button"> 💖 TE AMO 💖</button>
+    </a>
 
-    <a href="index_1.html">💖 TE AMO 💖 </a>
+    <a href="index_3.html"> 
+    <button class="romantic-button">💖 MOMENTOS 💖</button>
+    </a>
 
+    <a href="contador_01.html"> 
+    <button class="romantic-button">💖 CONTADOR 💖</button>
+    </a>
     <div>
+
+        <br> <br> <br><br> <br> <br>
+
+
+
+
         <a class="img">
         <img src="mao1.png" width="10%">
         </a>
@@ -70,15 +151,34 @@
         <br><br>
 
     </div>
+
+    <br> <br> <br>
+
     <br>
 
-    <h3>Nossos Momentos inesquecíveis juntos!</h3>
+    <h1>Nossos Momentos inesquecíveis juntos!</h1>
+
+    <br>
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="img_014.jpeg">
+            <img src="img_015.jpeg">
+            <img src="img_017.jpeg">
+            <img src="img_018.jpeg">
+            <img src="img_019.jpeg">
+            <img src="img_020.jpeg">
+            <img src="img_022.jpeg">
+        </div>
+    </div>
+
+    <br><br><br>
     
     <div class="carousel">
 
         <a class="controls">
             <button onclick="prevImage()">⬅️</button>        
-                <img id="carousel-img" src="img_020.jpeg" alt="MOMENTOS">
+                <img id="carousel-img" src="img_020.jpeg">
             <button onclick="nextImage()">➡️</button>
         </a>
 
@@ -107,17 +207,22 @@
         }
     </script>
 
-<iframe width="560" height="315" src="musica_01.mp4" frameborder="0" allowfullscreen>
+<br><br><br><br><br><br>
+
+<iframe 
+    width="560" 
+    height="315" 
+    src="musica_01.mp4" 
+    frameborder="0" 
+    allowfullscreen></iframe>
 
 
-
-</iframe>
+<br><br><br><br><br><br>
 
 <footer style="text-align: center;">
-    💖 Feito com amor por <strong>Diogo para a Erika</strong> 💖
+    💖 <strong> Feito com amor por Diogo para a Erika</strong> 💖
 </footer>
-
-
+<br><br><br>
 </body>
 
 
